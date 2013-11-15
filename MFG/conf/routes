@@ -2,12 +2,15 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.MainController.index()
+GET     /                           controllers.Login.showLoginForm
 GET     /message                    controllers.MessageController.getMessage()
 GET     /assets/javascripts/routes  controllers.MessageController.javascriptRoutes()
 
+# Formulare
 GET		/login						controllers.Login.showLoginForm()
 POST	/login						controllers.Login.dynamicform()
+
+GET     /test                       controllers.MainController.index
 
 
 # Map static resources from the /public folder to the /assets URL path
